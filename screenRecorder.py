@@ -14,7 +14,7 @@ sizeOfScreen = tuple(pyautogui.size())
 codec = cv2.VideoWriter_fourcc(*"XVID")
 
 # frames per second, this value can be experimented 
-framesPerSecond = 12.0
+framesPerSecond = 5
 
 # create the video write object
 out = cv2.VideoWriter("recording_Output.avi", codec, framesPerSecond, (sizeOfScreen))
