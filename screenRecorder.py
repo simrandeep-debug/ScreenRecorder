@@ -1,16 +1,20 @@
 
 ## import the required modules 
 
-from cv2 import waitKey
 import numpy
 import cv2 
 import pyautogui
+from cv2 import waitKey
 
 # display screen resolution, get it using pyautogui itself
+# pyautogui.size() will return resolution depending upon screen's resolution.
+
 sizeOfScreen = tuple(pyautogui.size())
 
-# define the codec
-# to encode/decode a data stream / media 
+# define the codec using VideoWriter.
+# FOURCC is a 4-byte code used to specify the video codec. More codecs can be found at FOURCC web page 
+# depending upon the need and requirement 
+
 codec = cv2.VideoWriter_fourcc(*"XVID")
 
 # frames per second, this value can be experimented 
