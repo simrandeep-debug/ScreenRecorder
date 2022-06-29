@@ -25,24 +25,25 @@ out = cv2.VideoWriter("recording_Output.avi", codec, framesPerSecond, (sizeOfScr
 
 ##########################################################
 
-##### continue taking screenshot using pyautogui and convert that into an array 
+##### continue taking screenshot using pyautogui and convert that into a numpy array 
 ##### Print the array / Show the output 
 while (True):
 
     currentScreen = pyautogui.screenshot() # Take a screenshot
 
-    frameData = numpy.array(currentScreen) # convert the screen snippet to a numpy array
+    frameData = numpy.array(currentScreen) # convert the screenshot to a numpy array
 
-    # by default, color schema is BGR, it is important to conver that to RGB schema 
+    # by default, the default color format in open CV is BGR, it is important to convert that to
+    # RGB color format to prevent any loss of information. 
     frameData = cv2.cvtColor(frameData, cv2.COLOR_BGR2RGB)
 
     out.write(frameData)
 
     # show the frame
     cv2.imshow("screenshot", frameData)
-    # if the user clicks q, it exits
-    if (cv2.waitKey(1) == ord("q") or cv2.waitKey(1) == ord('Q') ):
-        out.write("q or Q pressed, halt the execution")
+    # if the user clicks q, then stop the screen recorder.
+    if cv2.waitKey(1) == ord("q"):
+        out.write("q or Q pressed, stop recording the screen")
         break
 
 
@@ -50,4 +51,4 @@ while (True):
 ##### it is important to kill the object and release the memory (Video Writer object)
 
 out.release()
-cv2.destroyAllWindows() ## to destroy the GUI windows 
+out.destroyAllWindows() ## to destroy the GUI windows 
