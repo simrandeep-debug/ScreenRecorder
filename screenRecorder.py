@@ -1,6 +1,7 @@
 
 ## import the required modules 
 
+from cv2 import waitKey
 import numpy
 import cv2 
 import pyautogui
@@ -27,3 +28,15 @@ while (True):
     currentScreen = pyautogui.screenshot() # Take a screenshot
 
     frameData = numpy.array(currentScreen) # convert the screen snippet to a numpy array
+
+    # by default, color schema is BGR, it is important to conver that to RGB schema 
+    frameData = cv2.cvtColor(frameData, cv2.COLOR_BGR2RGB)
+
+    out.write(frameData)
+
+    # show the frame
+    cv2.imshow("screenshot", frameData)
+    # if the user clicks q, it exits
+    if (cv2.waitKey(1) == ord("q") or cv2.waitKey(1) == ord('Q') ):
+        out.write("q or Q pressed, halt the execution")
+        break
