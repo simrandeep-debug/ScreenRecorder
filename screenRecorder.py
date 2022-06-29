@@ -8,3 +8,9 @@ import pyautogui
 # display screen resolution, get it using pyautogui itself
 SCREEN_SIZE = tuple(pyautogui.size())
 
+# define the codec
+# to encode/decode a data stream / media 
+codec = cv2.VideoWriter_fourcc(*"XVID")
+
+# frames per second
+fps = 12.0
