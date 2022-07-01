@@ -4,7 +4,7 @@ This is a screen recording app created using Python and other modules (Pyautogui
 
 Steps to Record Screen :
 
-1. Make sure that python (latest version recommendede) is installed in your machine.
+1. Make sure that python (latest version recommended) is installed in your machine.
 if Python is already installed , run the screenRecorder.py file .
 
 There are multiple ways to do this .
