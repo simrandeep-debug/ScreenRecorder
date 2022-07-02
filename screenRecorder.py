@@ -12,8 +12,8 @@ from cv2 import waitKey
 sizeOfScreen = tuple(pyautogui.size())
 
 # define the codec using VideoWriter.
-# FOURCC is a 4-byte code used to specify the video codec. More codecs can be found at FOURCC web page 
-# depending upon the need and requirement 
+# FOURCC is a 4-byte code used to specify the video codec (A video codec library that Open-CV will use to write the video file.
+# More codecs can be found at FOURCC web page ,  depending upon the need and requirement 
 
 codec = cv2.VideoWriter_fourcc(*"XVID")
 
