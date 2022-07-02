@@ -41,3 +41,6 @@ This is only a beta version of the app and many more updates would be done in th
 However , this version of the script serves the purpose quite well and this can be used to record anything you want on your PC , for as much time as you want .
 
 In the next release , I will try to add "Audio Capabilities" in the script so that it is easier to explain to others , plus it will be made sure that the app is made more stable along with other improvements and ideas that may or may not be implemented.
+
+The most important would be to compress the size of the output files so that they can be shared easily .
+
