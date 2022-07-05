@@ -19,7 +19,12 @@ After downloading the required version , run the executable file and proceed wit
 
 3. After installing , to check that python has been installed , do the following : 
 open Command Prompt/Terminal/Bash > Type "Python" or "Py" and hit "Enter".
-If python is  installed , it will show the version details
+If python is  installed , it will show the version details.
+
+4. Next step is to install the required modules/dependencies/packages using :
+
+pip install numpy opencv-python pyautogui pygetwindow
+pip install pillow 
 
 4. Now that Python is installed , next step is to run the screenRecorder.py file 
 
